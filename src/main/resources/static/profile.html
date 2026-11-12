@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | Campus Hire</title>
+
+    <link rel="stylesheet"
+          href="profile.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h2>Campus Hire</h2>
+
+            <ul>
+
+                <li>
+                    <a href="student_dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="jobs.html">
+                        Jobs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="applications.html">
+                        Applications
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- MAIN CONTENT -->
+
+        <div class="main-content">
+
+            <div class="profile-card">
+
+                <h1>My Profile</h1>
+
+                <div class="completion-box">
+
+                    <h3>
+                        Profile Completion
+                    </h3>
+
+                    <div id="completionScore">
+                        0%
+                    </div>
+
+                </div>
+
+                <form id="profileForm">
+
+                    <label>Name</label>
+                    <input type="text"
+                           id="name"
+                           readonly>
+
+                    <label>Email</label>
+                    <input type="email"
+                           id="email"
+                           readonly>
+
+                    <label>Branch</label>
+                    <input type="text"
+                           id="branch"
+                           readonly>
+
+                    <label>Phone</label>
+                    <input type="tel"
+                           id="phone">
+
+                    <label>CGPA</label>
+                    <input type="number"
+                           id="cgpa"
+                           min="0"
+                           max="10"
+                           step="0.1">
+
+                    <label>Skills</label>
+
+                    <div class="skills">
+
+                        <label>
+                            <input type="checkbox"
+                                   value="C++">
+                            C++
+                        </label>
+
+                        <label>
+                            <input type="checkbox"
+                                   value="Java">
+                            Java
+                        </label>
+
+                        <label>
+                            <input type="checkbox"
+                                   value="Python">
+                            Python
+                        </label>
+
+                        <label>
+                            <input type="checkbox"
+                                   value="SQL">
+                            SQL
+                        </label>
+
+                        <label>
+                            <input type="checkbox"
+                                   value="HTML">
+                            HTML
+                        </label>
+
+                        <label>
+                            <input type="checkbox"
+                                   value="CSS">
+                            CSS
+                        </label>
+
+                        <label>
+                            <input type="checkbox"
+                                   value="JavaScript">
+                            JavaScript
+                        </label>
+
+                        <label>
+                            <input type="checkbox"
+                                   value="React">
+                            React
+                        </label>
+
+                        <label>Add Other Skills</label>
+
+<div class="custom-skill-box">
+
+    <input type="text"
+           id="customSkill"
+           placeholder="Example: Docker">
+
+    <button type="button"
+            onclick="addSkill()">
+
+        Add Skill
+
+    </button>
+
+</div>
+
+<div id="customSkillsList">
+
+</div>
+
+                    </div>
+
+                    <label>Resume</label>
+
+                    <input type="file"
+                           id="resume">
+
+                    <button type="submit">
+
+                        Save Changes
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="profile.js"></script>
+
+</body>
+
+</html>

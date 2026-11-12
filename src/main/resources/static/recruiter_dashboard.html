@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Recruiter Dashboard | Campus Hire</title>
+
+    <link rel="stylesheet"
+          href="recruiter_dashboard.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+
+        <div class="sidebar">
+
+            <h2>Campus Hire</h2>
+
+            <ul>
+
+                <li>
+                    <a href="recruiter_dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="create_vacancy.html">
+                        Create Vacancy
+                    </a>
+                </li>
+
+                <li>
+                    <a href="view_jobs.html">
+                        View Jobs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="view_applicants.html">
+                        View Applicants
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"
+                       onclick="logout()">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="main-content">
+
+            <div class="welcome-card">
+
+                <h1 id="companyName">
+                    Welcome
+                </h1>
+
+                <p>
+                    Manage vacancies and applicants.
+                </p>
+
+            </div>
+
+            <!-- Stats -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <h2 id="jobCount">
+                        0
+                    </h2>
+
+                    <p>
+                        Jobs Posted
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2 id="applicantCount">
+                        0
+                    </h2>
+
+                    <p>
+                        Applicants
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Actions -->
+
+            <div class="action-card">
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+                <div class="buttons">
+
+                    <a href="create_vacancy.html">
+                        Create Vacancy
+                    </a>
+
+                    <a href="view_applicants.html">
+                        View Applicants
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Company Details -->
+
+            <div class="profile-card">
+
+                <h2>
+                    Company Profile
+                </h2>
+
+                <table>
+
+                    <tr>
+                        <th>Company</th>
+                        <td id="profileCompany"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Email</th>
+                        <td id="profileEmail"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Phone</th>
+                        <td id="profilePhone"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Location</th>
+                        <td id="profileLocation"></td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="recruiter_dashboard.js"></script>
+
+</body>
+
+</html>

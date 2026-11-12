@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | Campus Hire</title>
+
+    <link rel="stylesheet"
+          href="student_dashboard.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h2>Campus Hire</h2>
+
+            <ul>
+
+                <li>
+                    <a href="student_dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="jobs.html">
+                        Jobs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="applications.html">
+                        Applications
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" onclick="logout()">
+                        Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- MAIN CONTENT -->
+
+        <div class="main-content">
+
+            <div class="welcome-card">
+
+                <h1 id="welcomeName">
+                    Welcome
+                </h1>
+
+                <p>
+                    Track your profile and opportunities.
+                </p>
+
+            </div>
+
+            <!-- SCORE -->
+
+            <div class="score-card">
+
+                <h2>
+                    Career Readiness Score
+                </h2>
+
+                <div id="scoreCircle">
+                    0%
+                </div>
+
+            </div>
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="action-card">
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+                <div class="buttons">
+
+                    <a href="jobs.html">
+                        View Jobs
+                    </a>
+
+                    <a href="applications.html">
+                        My Applications
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PROFILE -->
+
+            <div class="profile-card">
+
+                <h2>
+                    Profile Summary
+                </h2>
+
+                <table>
+
+                    <tr>
+                        <th>Name</th>
+                        <td id="studentName"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Email</th>
+                        <td id="studentEmail"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Phone</th>
+                        <td id="studentPhone"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Branch</th>
+                        <td id="studentBranch"></td>
+                    </tr>
+
+                    <tr>
+                        <th>CGPA</th>
+                        <td id="studentCGPA"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Skills</th>
+                        <td id="studentSkills"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Resume</th>
+                        <td id="studentResume"></td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="student_dashboard.js"></script>
+
+</body>
+
+</html>

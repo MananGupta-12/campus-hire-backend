@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:250px;
+
+    background:#1e3a8a;
+
+    color:white;
+
+    padding:30px 20px;
+}
+
+.sidebar h2{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.sidebar ul{
+
+    list-style:none;
+}
+
+.sidebar ul li{
+
+    margin:20px 0;
+}
+
+.sidebar ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    display:block;
+
+    padding:12px;
+
+    border-radius:8px;
+}
+
+.sidebar ul li a:hover{
+
+    background:#2563eb;
+}
+
+/* MAIN */
+
+.main-content{
+
+    flex:1;
+
+    padding:30px;
+}
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h1{
+
+    color:#1e3a8a;
+
+    margin-bottom:25px;
+}
+
+label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:5px;
+
+    font-weight:bold;
+}
+
+input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+}
+
+.skills{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:10px;
+
+    margin-top:10px;
+}
+
+.skills label{
+
+    font-weight:normal;
+}
+
+button{
+
+    width:100%;
+
+    margin-top:25px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+button:hover{
+
+    background:#1d4ed8;
+}
+
+@media(max-width:768px){
+
+    .dashboard{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .skills{
+        grid-template-columns:1fr;
+    }
+}
+.custom-skill-box{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:10px;
+}
+
+.custom-skill-box button{
+
+    width:auto;
+
+    margin-top:0;
+}
+
+#customSkillsList{
+
+    margin-top:15px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.skill-tag{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:8px 12px;
+
+    border-radius:20px;
+}

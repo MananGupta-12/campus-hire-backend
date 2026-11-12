@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:250px;
+
+    background:#1e3a8a;
+
+    color:white;
+
+    padding:30px 20px;
+}
+
+.sidebar h2{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.sidebar ul{
+
+    list-style:none;
+}
+
+.sidebar ul li{
+
+    margin:20px 0;
+}
+
+.sidebar ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    display:block;
+
+    padding:12px;
+
+    border-radius:8px;
+}
+
+.sidebar ul li a:hover{
+
+    background:#2563eb;
+}
+
+/* MAIN */
+
+.main-content{
+
+    flex:1;
+
+    padding:30px;
+}
+
+.welcome-card,
+.score-card,
+.action-card,
+.profile-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,0.1);
+}
+
+.welcome-card h1{
+
+    color:#1e3a8a;
+}
+
+/* SCORE */
+
+#scoreCircle{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    margin-top:20px;
+}
+
+/* BUTTONS */
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.buttons a{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 20px;
+
+    text-decoration:none;
+
+    border-radius:8px;
+}
+
+.buttons a:hover{
+
+    background:#1d4ed8;
+}
+
+/* TABLE */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+th,
+td{
+
+    padding:12px;
+
+    border-bottom:1px solid #ddd;
+
+    text-align:left;
+}
+
+th{
+
+    width:180px;
+
+    color:#1e3a8a;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .dashboard{
+
+        flex-direction:column;
+    }
+
+    .sidebar{
+
+        width:100%;
+    }
+
+    .buttons{
+
+        flex-direction:column;
+    }
+}
