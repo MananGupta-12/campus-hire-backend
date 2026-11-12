@@ -6,7 +6,8 @@ RUN chmod +x ./mvnw
 RUN ./mvnw clean package -DskipTests
 
 # Stage 2: Run the application
-FROM openjdk:17-jdk-slim
+# Using eclipse-temurin instead of the deprecated openjdk image
+FROM eclipse-temurin:17-jdk-alpine
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
