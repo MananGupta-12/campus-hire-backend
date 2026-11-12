@@ -128,8 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             try {
-                // Send the updated data to the new Spring Boot PutMapping
-                const response = await fetch("http://localhost:8080/api/students/update", {
+                // Send the updated data to the new Spring Boot PutMapping on Render
+                const response = await fetch("https://campus-hire-api-yiju.onrender.com/api/students/update", {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             } catch (error) {
                 console.error("Error saving profile:", error);
-                alert("Could not connect to the server.");
+                alert("Could not connect to the server. Make sure your Render backend is running.");
             }
         });
     }

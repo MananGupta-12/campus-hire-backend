@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             try {
-                // 4. Send the data to your Spring Boot backend
-                const response = await fetch("http://localhost:8080/api/students/register", {
+                // 4. Send the data to your Spring Boot backend on Render
+                const response = await fetch("https://campus-hire-api-yiju.onrender.com/api/students/register", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             } catch (error) {
                 console.error("Error connecting to backend:", error);
-                alert("Could not connect to the server. Make sure your Spring Boot backend is running.");
+                alert("Could not connect to the server. Make sure your Render backend is running.");
             }
         });
     } else {

@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             try {
-                const response = await fetch("http://localhost:8080/api/vacancies/create", {
+                const response = await fetch("https://campus-hire-api-yiju.onrender.com/api/vacancies/create", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(vacancyData)

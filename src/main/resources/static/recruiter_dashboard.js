@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // 3. Fetch Data for the Statistics Cards
     try {
-        // A. Fetch all vacancies from the database
-        const jobsResponse = await fetch("http://localhost:8080/api/vacancies/all");
+        // A. Fetch all vacancies from the Render database
+        const jobsResponse = await fetch("https://campus-hire-api-yiju.onrender.com/api/vacancies/all");
         if (!jobsResponse.ok) throw new Error("Failed to fetch jobs.");
 
         const allJobs = await jobsResponse.json();
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Loop through every job this company posted, and ask the database how many applicants it has
         for (const job of myJobs) {
-            const appsResponse = await fetch(`http://localhost:8080/api/applications/job/${job.id}`);
+            const appsResponse = await fetch(`https://campus-hire-api-yiju.onrender.com/api/applications/job/${job.id}`);
             if (appsResponse.ok) {
                 const applicants = await appsResponse.json();
                 totalApplicants += applicants.length; // Add this job's applicants to the grand total
@@ -67,10 +67,3 @@ function logout() {
         localStorage.removeItem("recruiterName");
         localStorage.removeItem("recruiterCompany");
         localStorage.removeItem("recruiterEmail");
-        localStorage.removeItem("recruiterPhone");
-        localStorage.removeItem("recruiterLocation");
-
-        // Send them back to the homepage
-        window.location.href = "index.html";
-    }
-}

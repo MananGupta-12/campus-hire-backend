@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     applicantsContainer.innerHTML = "<p>Loading applicants...</p>";
 
     try {
-        // 3. Fetch ALL jobs, then filter to only keep the jobs posted by THIS recruiter
-        const jobsResponse = await fetch("http://localhost:8080/api/vacancies/all");
+        // 3. Fetch ALL jobs from Render, then filter to only keep the jobs posted by THIS recruiter
+        const jobsResponse = await fetch("https://campus-hire-api-yiju.onrender.com/api/vacancies/all");
         if (!jobsResponse.ok) throw new Error("Failed to fetch vacancies.");
 
         const allJobs = await jobsResponse.json();
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             jobSection.className = "job-applicant-section"; // Use this class for CSS styling
             jobSection.innerHTML = `<h3>Applicants for: ${job.jobTitle}</h3>`;
 
-            // Fetch applicants for this specific job ID
-            const appsResponse = await fetch(`http://localhost:8080/api/applications/job/${job.id}`);
+            // Fetch applicants for this specific job ID from Render
+            const appsResponse = await fetch(`https://campus-hire-api-yiju.onrender.com/api/applications/job/${job.id}`);
             if (!appsResponse.ok) throw new Error(`Failed to fetch applicants for job ${job.id}`);
 
             const applicants = await appsResponse.json();
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } catch (error) {
         console.error("Error fetching data:", error);
-        applicantsContainer.innerHTML = "<p style='color: red;'>Could not load applicant data. Please ensure your backend is running on port 8080.</p>";
+        applicantsContainer.innerHTML = "<p style='color: red;'>Could not load applicant data. Please ensure your Render backend is running.</p>";
     }
 });
 

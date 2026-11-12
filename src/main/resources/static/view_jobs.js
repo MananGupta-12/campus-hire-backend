@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     jobsContainer.innerHTML = "<p>Loading your posted jobs...</p>";
 
     try {
-        // 3. Fetch ALL jobs from the Spring Boot backend
-        const response = await fetch("http://localhost:8080/api/vacancies/all");
+        // 3. Fetch ALL jobs from the Render backend
+        const response = await fetch("https://campus-hire-api-yiju.onrender.com/api/vacancies/all");
 
         if (!response.ok) {
             throw new Error("Failed to fetch jobs from the server.");
@@ -78,6 +78,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } catch (error) {
         console.error("Error fetching jobs:", error);
-        jobsContainer.innerHTML = "<p style='color: red;'>Could not load your jobs. Please ensure your Spring Boot server is running on port 8080.</p>";
+        jobsContainer.innerHTML = "<p style='color: red;'>Could not load your jobs. Please ensure your Render backend is running.</p>";
     }
 });
