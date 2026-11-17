@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     applicationsContainer.innerHTML = "<p>Loading your applications...</p>";
 
     try {
-        // 3. Fetch the student's personal applications
-        const appsResponse = await fetch(`http://localhost:8080/api/applications/student/${studentEmail}`);
+        // 3. Fetch the student's personal applications from the live Render backend
+        const appsResponse = await fetch(`https://campus-hire-api-yiju.onrender.com/api/applications/student/${studentEmail}`);
         if (!appsResponse.ok) throw new Error("Failed to fetch applications.");
         const applications = await appsResponse.json();
 
-        // 4. Fetch all vacancies to match the Vacancy ID with the Job Title & Company Name
-        const jobsResponse = await fetch("http://localhost:8080/api/vacancies/all");
+        // 4. Fetch all vacancies to match the Vacancy ID with the Job Title & Company Name from Render
+        const jobsResponse = await fetch("https://campus-hire-api-yiju.onrender.com/api/vacancies/all");
         if (!jobsResponse.ok) throw new Error("Failed to fetch job details.");
         const vacancies = await jobsResponse.json();
 
